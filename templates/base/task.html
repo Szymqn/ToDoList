@@ -1,1 +1,9 @@
 <h1>Task: {{ object }}</h1>
+
+<h2>Description: {{ object.description }}</h2>
+<h2 style="display: inline-block">Status: </h2>
+{% if object.complete %}
+    <h2 style="display: inline-block">Task completed</h2>
+{% else %}
+    <h2 style="display: inline-block">Task uncompleted</h2>
+{% endif %}
