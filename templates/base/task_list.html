@@ -1,11 +1,10 @@
 {% if request.user.is_authenticated %}
-    <p>{{ request.user }}</p>
+    <p>User: {{ request.user }}</p>
     <a href="{% url 'logout' %}">Logout</a>
 {% else %}
     <a href="{% url 'login' %}">Login</a>
 {% endif %}
 
-<hr>
 <h1>My To Do List</h1>
 <a href="{% url 'task-create' %}">Add task</a>
 
@@ -21,6 +20,8 @@
         <th>Item</th>
         <th></th>
         <th></th>
+        <th></th>
+        <th>Status</th>
     </tr>
     {% for task in tasks %}
     <tr>
@@ -29,7 +30,7 @@
         <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
         <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
         {% load static %}
-        <td> Status:
+        <td>
             {% if task.complete %}
                 <img src="{% static 'base/done.png' %}" alt="done" width="20" height="20">
             {% else %}
