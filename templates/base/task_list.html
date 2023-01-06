@@ -28,6 +28,14 @@
         <td><a href="{% url 'task' task.id %}">View</a></td>
         <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
         <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
+        {% load static %}
+        <td> Status:
+            {% if task.complete %}
+                <img src="{% static 'base/done.png' %}" alt="done" width="20" height="20">
+            {% else %}
+                <img src="{% static 'base/undone.png' %}" alt="done" width="20" height="20">
+            {% endif %}
+        </td>
     </tr>
     {% empty %}
         <h3>No items in list!</h3>
