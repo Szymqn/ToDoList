@@ -1,4 +1,5 @@
 from django.urls import path
+
 from user.views import CustomLogin, RegisterPage
 from django.contrib.auth.views import LogoutView
 
