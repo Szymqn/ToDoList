@@ -1,3 +1,5 @@
+{% load static %}
+
 {% if request.user.is_authenticated %}
     <p>User: {{ request.user }}</p>
     <a href="{% url 'logout' %}">Logout</a>
@@ -29,7 +31,6 @@
         <td><a href="{% url 'task' task.id %}">View</a></td>
         <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
         <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
-        {% load static %}
         <td>
             {% if task.complete %}
                 <img src="{% static 'base/done.png' %}" alt="done" width="20" height="20">
