@@ -1,4 +1,4 @@
-# Django To-Do List Project Documentation
+# Django To-Do List Project
 
 **Introduction**
 
