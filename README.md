@@ -1,5 +1,6 @@
-Django To-Do List Project Documentation
-Introduction
+# Django To-Do List Project Documentation
+
+**Introduction**
 
 This project is a to-do list application built using Django, which allows users to log in, create new users, view tasks with status for each user, search tasks, and perform CRUD (create, read, update, delete) operations on tasks.  
 
